@@ -1,0 +1,30 @@
+{
+  "name": "ts-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devopsjester/ts-weather.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devopsjester/ts-weather/issues"
+  },
+  "homepage": "https://github.com/devopsjester/ts-weather#readme"
+}
