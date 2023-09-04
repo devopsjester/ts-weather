@@ -1,0 +1,23 @@
+# Dependency directories
+node_modules/
+
+# Build output directories
+dist/
+build/
+
+# Environment variables
+.env
+
+# Editor directories and files
+.vscode/
+*.swp
+*.swo
+
+# IDE configuration files
+*.idea/
+*.iml
+*.iws
+*.ipr
+
+# Type declarations
+*.d.ts
