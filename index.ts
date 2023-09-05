@@ -34,11 +34,25 @@ if (!apiKey) {
     process.exit(1);
 }
 
+const validateZip = (zip: string): boolean => {
+    const zipRegex = /^\d{5}$/;
+    return zipRegex.test(zip);
+};
+
+if (!validateZip(zip)) {
+    console.error('Invalid ZIP code');
+    process.exit(1);
+}
+
+const sanitizeInput = (input: string): string => {
+    return input.replace(/[^a-zA-Z0-9\s]/g, '');
+};
+
 axios
     .get<ZipData>(`https://api.zippopotam.us/us/${zip}`)
     .then((response) => {
         const { state, 'place name': city } = response.data.places[0];
-        console.log(`City: ${city}, State: ${state}`);
+        console.log(`City: ${sanitizeInput(city)}, State: ${sanitizeInput(state)}`);
 
         return axios.get<WeatherData>(`https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&appid=${apiKey}&units=imperial`);
     })
